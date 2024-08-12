@@ -5,8 +5,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.keys import Keys
 
 """
 Написать 5 автотестов по примеру ниже, 
@@ -55,9 +53,8 @@ def test_write_login_password(driver):
     write_password.send_keys('AdminPass123')
 
     button_sign_in = driver.find_element(By.XPATH, '//button[@data-ux-btn="primary"]')
-    button_sign_in.click()
+    assert button_sign_in.click()
 
-    time.sleep(5)
 
 
 def test_invalid_email(driver):
@@ -77,7 +74,7 @@ def test_invalid_email(driver):
     message = driver.find_element(By.XPATH, '//p[@data-aid="MEMBERSHIP_SSO_ERR_REND"]')
     assert message
 
-    time.sleep(2)
+
 
 
 def test_invalid_password(driver):
@@ -97,6 +94,6 @@ def test_invalid_password(driver):
     message = driver.find_element(By.XPATH, '//p[@data-aid="MEMBERSHIP_SSO_ERR_REND"]')
     assert message
 
-    time.sleep(2)
+
 
 
