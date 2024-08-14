@@ -1,0 +1,1 @@
+DEMOWEBSHOP = 'https://demowebshop.tricentis.com'

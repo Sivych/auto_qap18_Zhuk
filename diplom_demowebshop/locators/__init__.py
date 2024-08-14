@@ -1,0 +1,4 @@
+from diplom_demowebshop.locators.newsletter_locators import NewsletterLocators
+from diplom_demowebshop.locators.main_locators import MainLocators
+from diplom_demowebshop.locators.header_links_locators import HeaderLinksLocators
+from diplom_demowebshop.locators.cart_locators import CartLocators
